@@ -1,5 +1,7 @@
 class BeaconsController < ApplicationController
   def track
+    #find user_record_id by Apple advertisment_id
+    #save beacon with uuid, user_record_id, distance
   end
 
   def show
