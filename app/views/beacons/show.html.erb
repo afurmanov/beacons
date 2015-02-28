@@ -1,0 +1,15 @@
+<h1>Store map</h1>
+<% @map.each do |rasbery, beacons| %>
+<h3><%= rasbery.location %></h3>
+<ul>
+  <% beacons.each do |beacon| %>
+    <%= beacon.distance %>
+  <% end %>
+</ul>
+<% end %>
+<script type="text/javascript">
+  var reloadPage = function() {
+    window.location.reload();
+  };
+  setTimeout(reloadPage, 2000);
+</script>
