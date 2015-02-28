@@ -11,20 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150228024009) do
+ActiveRecord::Schema.define(version: 20150228030002) do
 
   create_table "activities", force: true do |t|
     t.integer  "user_id"
     t.integer  "rasbery_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "active"
   end
 
   create_table "beacons", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "uuid",                  null: false
-    t.float    "distance",   limit: 24, null: false
+    t.text     "uuid",                   null: false
+    t.float    "distance",    limit: 24, null: false
+    t.integer  "activity_id",            null: false
   end
 
   create_table "rasberies", force: true do |t|
