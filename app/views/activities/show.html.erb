@@ -1,0 +1,12 @@
+<h1>Store map</h1>
+<% @activities.each do |activity| %>
+<p>User Record ID: <%= activity.user.user_record_id %></p>
+<p>Rasbery location: <%= activity.rasbery.location %></p>
+<p>Distance: <%= activity.recent_beacon.distance %>
+<% end %>
+<script type="text/javascript">
+  var reloadPage = function() {
+    window.location.reload();
+  };
+  setTimeout(reloadPage, 2000);
+</script>
